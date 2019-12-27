@@ -20,7 +20,7 @@ public class EmailController {
     @RequestMapping
     public JsonResult index(){
         try {
-            mailService.sendSimpleMail("zengbiwen@spacecg.cn","这是一封普通的邮件","这是一封普通的测试邮件");
+            mailService.sendSimpleMail("11111@spacecg.cn","这是一封普通的邮件","这是一封普通的测试邮件");
         }catch (Exception ex){
             ex.printStackTrace();
             return new JsonResult(-1,"邮件发送失败!!");
@@ -31,7 +31,7 @@ public class EmailController {
     @RequestMapping("/htmlEmail")
     public JsonResult htmlEmail(){
         try {
-            mailService.sendHtmlMail("3066356466@qq.com","这是一HTML的邮件","<body style=\"text-align: center;margin-left: auto;margin-right: auto;\">\n"
+            mailService.sendHtmlMail("11111@qq.com","这是一HTML的邮件","<body style=\"text-align: center;margin-left: auto;margin-right: auto;\">\n"
                     + "	<div id=\"welcome\" style=\"text-align: center;position: absolute;\" >\n"
                     +"		<h3>欢迎使用IJPay -By Javen</h3>\n"
                     +"		<span>https://github.com/Javen205/IJPay</span>"
@@ -52,7 +52,7 @@ public class EmailController {
     public JsonResult attachmentsMail(){
         try {
             String filePath = "C:\\Users\\Administrator\\Pictures\\Feedback\\1.jpg";
-            mailService.sendAttachmentsMail("3066356466@qq.com", "这是一封带附件的邮件", "邮件中有附件，请注意查收！", filePath);
+            mailService.sendAttachmentsMail("11111@qq.com", "这是一封带附件的邮件", "邮件中有附件，请注意查收！", filePath);
         }catch (Exception ex){
             ex.printStackTrace();
             return new JsonResult(-1,"邮件发送失败!!");
@@ -66,7 +66,7 @@ public class EmailController {
             String rscId = "IJPay";
             String content = "<html><body>这是有图片的邮件<br/><img src=\'cid:" + rscId + "\' ></body></html>";
             String imgPath = "/Users/Javen/Desktop/IJPay.png";
-            mailService.sendResourceMail("18126494558@163.com", "这邮件中含有图片", content, imgPath, rscId);
+            mailService.sendResourceMail("11111@163.com@163.com", "这邮件中含有图片", content, imgPath, rscId);
 
         }catch (Exception ex){
             ex.printStackTrace();
@@ -84,7 +84,7 @@ public class EmailController {
             context.setVariable("url", "https://github.com/Javen205/IJPay");
             String emailContent = templateEngine.process("emailTemp", context);
 
-            mailService.sendHtmlMail("3066356466@qq.com", "这是模板邮件", emailContent);
+            mailService.sendHtmlMail("11111@qq.com", "这是模板邮件", emailContent);
         }catch (Exception ex){
             ex.printStackTrace();
             return new JsonResult(-1,"邮件发送失败!!");

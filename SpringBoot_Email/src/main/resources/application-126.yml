@@ -8,8 +8,8 @@ spring:
       time-zone: GMT+8
   mail:
     host: smtp.126.com
-    username: 18126494558@163.com
-    password: IJPay666
+    username: 111111@163.com
+    password: 4546444464
     protocol: smtp
     properties.mail.smtp.auth: true
     properties.mail.smtp.port: 994
@@ -19,4 +19,4 @@ spring:
     properties.mail.smtp.starttls.required: true
     properties.mail.smtp.ssl.enable: true
     default-encoding: utf-8
-    from: 18126494558@163.com
+    from: 11111@163.com@163.com
