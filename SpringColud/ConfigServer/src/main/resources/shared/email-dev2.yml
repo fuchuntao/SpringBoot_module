@@ -1,0 +1,35 @@
+server:
+  port: 8020
+spring:
+  application:
+    name: email-provider
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  mail:
+    host: smtp.qq.com
+    username: 572839485@qq.com
+    password: ldhpmywnsarrbdbd
+    protocol: smtp
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 465
+    properties.mail.display.sendmail: Javen
+    properties.mail.display.sendname: Spring Boot Guide Email
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    default-encoding: utf-8
+    from: 572839485@qq.com
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/     # one eureka server
+      #defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/     # two eureka server
+      #defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/,http://localhost:1113/eureka/     # three eureka server
+  instance:
+    prefer-ip-address: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health # 或者 '*'

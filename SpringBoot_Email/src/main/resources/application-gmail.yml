@@ -1,0 +1,26 @@
+server:
+  port: 8888
+  servlet:
+    path: /
+spring:
+  jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+#      default-property-inclusion: non_null
+  mail:
+    host: smtp.gmail.com
+    username: javen205@gmail.com
+    password: javen1111578
+    protocol: smtp
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 465
+    properties.mail.display.sendmail: javen205@gmail.com
+    properties.mail.display.sendname: javen205@gmail.com
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    from: javen205@gmail.com
+    default-encoding: utf-8
+logging:
+  config: classpath:log/logback-gmail.xml
+

@@ -1,0 +1,23 @@
+server:
+  port: 1113
+
+spring:
+  application:
+    name: eureka-server
+eureka:
+  instance:
+    hostname: localhost
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/,http://localhost:1112/eureka/ # three eureka server
+    register-with-eureka: true
+    fetch-registry: true
+  server:
+    registry-sync-retry-wait-ms: 0
+    enable-self-preservation: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health # 或者 '*'

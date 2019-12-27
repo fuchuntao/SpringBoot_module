@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: email
+  profiles:
+    active: dev
+  cloud:
+    config:
+      uri: http://ijpay-config:8861
+      fail-fast: true

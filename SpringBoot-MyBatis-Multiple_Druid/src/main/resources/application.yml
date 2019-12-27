@@ -1,0 +1,38 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /
+mybatis:
+  type-aliases-package: com.javen.model
+spring:
+  datasource:
+    druid:
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 3000
+      master:
+        url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        #初始化连接大小
+        initial-size: 6
+        #最小接数
+        min-idle: 6
+        #最大连接数
+        max-active: 10
+        #配置获取连接等待超时的时间
+        max-wait: 60000
+      slave:
+        url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=true
+        username: root
+        password: root
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        initial-size: 6
+        min-idle: 6
+        max-active: 10
+        max-wait: 60000
+      stat-view-servlet:
+        login-username: IJPay
+        login-password: 123456

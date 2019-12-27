@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ribbon-no-eureka
+server:
+  port: 6626
+ribbon:
+  eureka:
+    enabled: false #脱离 Eureka 使用 Ribbon
+email-provider:  # 服务提供者名称
+  ribbon:
+    listOfServers: localhost:8020,localhost:8010 # 服务列表

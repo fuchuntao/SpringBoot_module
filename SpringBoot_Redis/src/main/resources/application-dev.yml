@@ -1,0 +1,23 @@
+server:
+  port: 8081
+  servlet:
+    path: /
+spring:
+  redis:
+    database: 6
+    host: 192.168.1.11
+    password: IJPay
+    port: 6379
+    timeout: 5000d
+    lettuce:
+      pool:
+        #连接池的最大数据库连接数（设为0表示无限制）
+        max-active: 8
+        #连接池中的最大空闲连接，默认值是8。
+        max-idle: 8
+        #连接池中的最小空闲连接，默认值是0。
+        min-idle: 0
+        #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+      shutdown-timeout: 100ms
+

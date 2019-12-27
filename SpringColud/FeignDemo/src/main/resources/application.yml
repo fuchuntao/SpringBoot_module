@@ -1,0 +1,15 @@
+server:
+  port: 9180
+
+spring:
+  application:
+    name: feign-demo
+feign:
+  httpclient:
+    enabled: false
+  okhttp:
+    enabled: true
+
+logging:
+  level:
+    com.javen.service.FenignService: debug

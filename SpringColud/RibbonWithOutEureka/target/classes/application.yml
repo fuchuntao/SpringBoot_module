@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ribbon-no-eureka
+server:
+  port: 6626
+ribbon:
+  eureka:
+    enabled: false
+email-provider:
+  ribbon:
+    listOfServers: localhost:8020,localhost:8010

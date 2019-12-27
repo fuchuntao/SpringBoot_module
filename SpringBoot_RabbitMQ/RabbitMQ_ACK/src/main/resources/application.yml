@@ -1,0 +1,20 @@
+server:
+  port: 8089
+spring:
+  rabbitmq:
+    host: 58.87.110.38
+    port: 5672
+    username: root
+    password: 123456
+    # 开启发送确认
+    publisher-confirms: true
+    # 开启发送失败退回
+    publisher-returns: true
+    template:
+      mandatory: true
+    # 开启ACK
+    listener:
+      simple:
+        acknowledge-mode: manual
+      direct:
+        acknowledge-mode: manual
